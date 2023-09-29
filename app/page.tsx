@@ -10,7 +10,7 @@ export default async function Home() {
   const data = await res.json();
 
   return (
-    <main>
+    <main className="flex items-center justify-center">
       <Gallery isToday={true} {...data} />
     </main>
   );
