@@ -1,9 +1,17 @@
-import Image from "next/image";
+import Gallery from "@/components/gallery";
 
-export default function Home() {
+import React from "react";
+
+export default async function Home() {
+  const res = await fetch(
+    `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}`,
+    { next: { revalidate: 3600 } }
+  );
+  const data = await res.json();
+
   return (
     <main>
-      <h1>Starman</h1>
+      <Gallery isToday={true} {...data} />
     </main>
   );
 }
