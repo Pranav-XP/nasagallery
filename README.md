@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<strong> StarMan </strong>
+# Starman
 
 This is a project to apply REST API integration in a NextJS App. The API used is NASA API.
 
