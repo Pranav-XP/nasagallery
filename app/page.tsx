@@ -24,10 +24,12 @@ export default function Home() {
             height={300}
             className="rounded-lg"
           />
+          <Link href={`/${today()}`}>
           <Button className="w-32 flex justify-evenly font-bold hover:bg-violet-600 bg-violet-500">
-            <Link href={`/${today()}`}>Lift Off</Link>
+            Lift Off
             <Rocket />
           </Button>
+            </Link>
           <p className="pt-2">
             Made by{" "}
             <a
