@@ -70,14 +70,14 @@ const Gallery = ({
           </div>
         </div>
         <div className="pb-10 pt-5 flex flex-row gap-5 items-center justify-center border-t border-slate-500 bg-violet-200/10 md:hover:bg-gray-900/60 rounded-t-md transition-all duration-300 ease-in-out md:bg-slate-500/10">
-          <Button className="w-32 flex font-bold hover:bg-violet-800 bg-violet-700">
-            <Link href={`/${getYesterday(formattedDate)}`}>
+          <Link href={`/${getYesterday(formattedDate)}`}>
+            <Button className="w-32 flex font-bold hover:bg-violet-800 bg-violet-700">
               <span className="flex flex-row items-center">
                 <ChevronLeft />
                 Previous
               </span>
-            </Link>
-          </Button>
+            </Button>
+          </Link>
 
           <Popover>
             <PopoverTrigger className=" px-3 py-2 rounded-lg flex items-center font-bold hover:bg-violet-800 bg-violet-700">
@@ -89,14 +89,14 @@ const Gallery = ({
           </Popover>
 
           {isToday == false ? (
-            <Button className="w-32 flex font-bold hover:bg-violet-800 bg-violet-700">
-              <Link href={`/${getTomorrow(formattedDate)}`}>
+            <Link href={`/${getTomorrow(formattedDate)}`}>
+              <Button className="w-32 flex font-bold hover:bg-violet-800 bg-violet-700">
                 <span className="flex flex-row items-center">
                   Next
                   <ChevronRight />
                 </span>
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           ) : (
             ""
           )}
