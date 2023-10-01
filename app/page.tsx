@@ -1,10 +1,8 @@
-import LiftOff from "@/components/lift-off-button";
 import { Button } from "@/components/ui/button";
 import { circleLogo, logo } from "@/lib/images/utils";
 import { Rocket } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 import React from "react";
 
@@ -16,10 +14,8 @@ export default function Home() {
   return (
     <>
       <main className="overflow-hidden h-screen flex flex-col items-center justify-center ">
-        <div className="flex flex-col items-center justify-center border border-slate-700 hover:bg-gray-500/10 rounded-md transition-all duration-300 ease-in-out bg-gray-800/10 p-5">
-          <h1 className="text-6xl font-black self-start font-serif tracking-wider">
-            Welcome
-          </h1>
+        <div className="flex flex-col items-center justify-center border border-slate-500 hover:bg-gray-500/10 rounded-md transition-all duration-1000 ease-in-out bg-violet-200/10 p-5">
+          <h1 className="text-6xl font-black self-start">Welcome</h1>
 
           <Image
             src={circleLogo}
@@ -32,6 +28,15 @@ export default function Home() {
             <Link href={`/${today()}`}>Lift Off</Link>
             <Rocket />
           </Button>
+          <p className="pt-2">
+            Made by{" "}
+            <a
+              href="https://www.pranavtech.dev/"
+              className="underline font-semibold"
+            >
+              Pranav
+            </a>
+          </p>
         </div>
       </main>
     </>

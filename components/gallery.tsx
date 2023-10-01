@@ -4,7 +4,16 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Home,
+  HomeIcon,
+  Info,
+  LucideHome,
+} from "lucide-react";
+import { logo } from "@/lib/images/utils";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 function getYesterday(firstDate: Date) {
   let yesterday = new Date(firstDate);
@@ -24,9 +33,17 @@ interface IGalleryProps {
   title: string;
   copyright: string;
   isToday: Boolean;
+  explanation: string;
 }
 
-const Gallery = ({ hdurl, date, title, copyright, isToday }: IGalleryProps) => {
+const Gallery = ({
+  hdurl,
+  date,
+  title,
+  copyright,
+  isToday,
+  explanation,
+}: IGalleryProps) => {
   let formattedDate = new Date(date);
   return (
     <section>
@@ -45,12 +62,15 @@ const Gallery = ({ hdurl, date, title, copyright, isToday }: IGalleryProps) => {
       />
 
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-50 w-full ">
-        <div className="text-left font-bold w-fit px-5">
-          <h2>{date}</h2>
-          <h2>{copyright}</h2>
+        <div className="text-left font-bold w-fit px-5 pb-2 flex text-lg">
+          <Image src={logo} alt="second logo" width={50} height={50} />
+          <div className="flex flex-col">
+            <h2>{date}</h2>
+            <h2>{copyright}</h2>
+          </div>
         </div>
-        <div className="p-5 flex flex-row gap-5 items-center justify-evenly mb-5">
-          <Button className="w-32 font-bold">
+        <div className="pb-10 pt-5 flex flex-row gap-5 items-center justify-center border-t border-slate-500 bg-violet-200/10 md:hover:bg-gray-900/60 rounded-t-md transition-all duration-300 ease-in-out md:bg-slate-500/10">
+          <Button className="w-32 flex font-bold hover:bg-violet-800 bg-violet-700">
             <Link href={`/${getYesterday(formattedDate)}`}>
               <span className="flex flex-row items-center">
                 <ChevronLeft />
@@ -59,8 +79,17 @@ const Gallery = ({ hdurl, date, title, copyright, isToday }: IGalleryProps) => {
             </Link>
           </Button>
 
+          <Popover>
+            <PopoverTrigger className=" px-3 py-2 rounded-lg flex items-center font-bold hover:bg-violet-800 bg-violet-700">
+              <Info />
+            </PopoverTrigger>
+            <PopoverContent className="font-medium h-56 overflow-scroll border-slate-700 bg-slate-50">
+              {explanation}
+            </PopoverContent>
+          </Popover>
+
           {isToday == false ? (
-            <Button className="w-32 font-bold">
+            <Button className="w-32 flex font-bold hover:bg-violet-800 bg-violet-700">
               <Link href={`/${getTomorrow(formattedDate)}`}>
                 <span className="flex flex-row items-center">
                   Next
