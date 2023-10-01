@@ -10,8 +10,8 @@ const serif = Playfair_Display({
   weight: ["700", "800", "900"],
 });
 export const metadata: Metadata = {
-  title: "Satellite",
-  description: "View beautiful images of outerspace.",
+  title: "Starman",
+  description: "Gallery for NASA Image of the Day.",
 };
 
 export default function RootLayout({
@@ -20,11 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} ${serif.variable}`}>
-        <Header />
-        {children}
-      </body>
+    <html lang="en" className={`${inter.className} ${serif.variable}`}>
+      <body className="h-full w-full">{children}</body>
     </html>
   );
 }
