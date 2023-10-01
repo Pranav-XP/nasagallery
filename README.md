@@ -1,17 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<strong> App is in Alpha Stage </strong>
+<strong> StarMan </strong>
 
-This is a project to apply REST API integration in a NextJS App. The API used is NASA API. 
+This is a project to apply REST API integration in a NextJS App. The API used is NASA API.
 
 ## Features
+
 1. View current and previous photos
 2. Load photos in HD
-
-## TODO
-1. Fix next button bug
-2. Implement manual date search
-3. Implement favorites feature (will require auth)
+3. View information about the photo.
 
 ## Getting Started
 

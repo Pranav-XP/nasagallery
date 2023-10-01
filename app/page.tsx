@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <main className="overflow-hidden h-screen flex flex-col items-center justify-center ">
-        <div className="flex flex-col items-center justify-center border border-slate-500 hover:bg-gray-500/10 rounded-md transition-all duration-1000 ease-in-out bg-violet-200/10 p-5">
+        <div className="flex flex-col items-center justify-center border border-slate-500 shadow-inner hover:bg-violet-100/10 rounded-md transition-all duration-1000 ease-in-out bg-violet-500/10 p-5">
           <h1 className="text-6xl font-black self-start">Welcome</h1>
 
           <Image
