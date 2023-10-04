@@ -14,9 +14,7 @@ export default function Home() {
   return (
     <>
       <main className="overflow-hidden h-screen flex flex-col items-center justify-center ">
-        <div className="flex flex-col items-center justify-center border border-slate-500 shadow-inner hover:bg-violet-100/10 rounded-md transition-all duration-1000 ease-in-out bg-violet-500/10 p-5">
-          <h1 className="text-6xl font-black self-start">Welcome</h1>
-
+        <div className="flex flex-col items-center justify-center border border-slate-500 shadow-inner hover:shadow-none hover:border-none hover:bg-inherit rounded-md transition-all duration-300 shadow-slate-50 bg-zinc-700/10 p-5">
           <Image
             src={circleLogo}
             alt="Starman Logo"
@@ -25,11 +23,11 @@ export default function Home() {
             className="rounded-lg"
           />
           <Link href={`/${today()}`}>
-          <Button className="w-32 flex justify-evenly font-bold hover:bg-violet-600 bg-violet-500">
-            Lift Off
-            <Rocket />
-          </Button>
-            </Link>
+            <Button className="w-32 flex justify-evenly font-bold border shadow-inner shadow-indigo-400 active:shadow-indigo-800 border-indigo-600 md:hover:bg-indigo-800 bg-indigo-700">
+              Lift Off
+              <Rocket />
+            </Button>
+          </Link>
           <p className="pt-2">
             Made by{" "}
             <a
