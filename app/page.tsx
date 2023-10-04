@@ -21,7 +21,7 @@ export default function Home() {
             className="rounded-lg"
           />
           <Link href={`/${today()}`}>
-            <Button className="w-32 flex justify-evenly font-bold border shadow-inner shadow-indigo-400 border-indigo-600 md:hover:bg-indigo-800 active:bg-indigo-700 bg-indigo-700">
+            <Button className="w-32 flex justify-evenly font-bold border shadow-inner shadow-indigo-400 border-indigo-600 md:hover:bg-indigo-800 bg-indigo-700">
               Lift Off
               <Rocket />
             </Button>
