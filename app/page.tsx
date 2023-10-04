@@ -7,10 +7,8 @@ import Link from "next/link";
 import React from "react";
 
 export default function Home() {
-  const today = () => {
-    let now = new Date();
-    return now.toISOString().split("T")[0];
-  };
+  let today = () => new Date().toISOString().split("T")[0];
+
   return (
     <>
       <main className="overflow-hidden h-screen flex flex-col items-center justify-center ">
