@@ -4,14 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Home,
-  HomeIcon,
-  Info,
-  LucideHome,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Info } from "lucide-react";
 import { logo } from "@/lib/images/utils";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
