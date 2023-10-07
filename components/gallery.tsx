@@ -25,7 +25,6 @@ interface IGalleryProps {
   date: string;
   title: string;
   copyright: string;
-  isToday: Boolean;
   explanation: string;
 }
 
@@ -34,10 +33,18 @@ const Gallery = ({
   date,
   title,
   copyright,
-  isToday,
   explanation,
 }: IGalleryProps) => {
   let formattedDate = new Date(date);
+
+  const today = () => {
+    let now = new Date().toLocaleString("en-US", {
+      timeZone: "America/New_York",
+    });
+    let formatted = new Date(now).toISOString().split("T")[0];
+    return formatted;
+  };
+  let isToday: boolean = date === today();
   return (
     <section>
       <div className="absolute z-50 m-5">
